@@ -3,13 +3,35 @@
 
 feed backform form for new employe joins, and 
 
-feed back forms for BCP1, BCP2
+feed back forms for BCP1
+https://forms.office.com/Pages/ResponsePage.aspx?id=FTrTJhyUhUKaF3vGe4xRnMu2oQrmD5RBs-zmMhoIfOBURThaMkVGSVNTQUdDNlFOT0RZV1g2V09UUy4u
 
-Questionary for Q2, Q3, and Q4 we have med trainer
+, BCP2
+
+https://forms.office.com/Pages/ResponsePage.aspx?id=FTrTJhyUhUKaF3vGe4xRnMu2oQrmD5RBs-zmMhoIfOBUNDBGWk84MlFLNDEwRUtGUUxJSTUzR0hHNi4u
+
+Questionary for Q2
+
+
+
+, Q3, and Q4 we have med trainer
 
 
 
 we have lists and need to create that as soon as possibel
 
 
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[1]/div[2]/div/span/input').send_keys(row[0])
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[2]/div[2]/div/span/input').send_keys(row[1])
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[3]/div[2]/div/span/input').send_keys(row[2])
 
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[4]/div[2]/div/div/div[3]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[5]/div[2]/div/div/div[1]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[6]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[7]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[8]/div[2]/div/div/div[4]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[9]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[11]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[12]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[13]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
