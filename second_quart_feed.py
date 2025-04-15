@@ -19,10 +19,14 @@ import random
 os_name = platform.system()
 print("Operating System Name:", os_name)
 
+
 if os_name == 'Windows':
-    driver_path = r'C:\Windows\chromedriver.exe'
+    driver_path = r"C:\Windows\chromedriver.exe"
+    dir_path = r"C:\Users\durai\OneDrive\Desktop\sali\webdriver\user_list"
+    directory = os.path.expanduser(dir_path)
 elif os_name == 'Linux':
     driver_path = r'/home/saliv/chrome_driver/chromedriver'
+    directory = os.path.expanduser('/home/saliv/Devops/Python/webdriver/user_list')
 else:
     print("Running on an unsupported OS. Exiting...")
     exit(1)
@@ -30,11 +34,11 @@ else:
 service = Service(driver_path)
 
 # Directory for CSV files
-directory = os.path.expanduser('/home/saliv/Devops/Python/webdriver/user_list')
+# directory = os.path.expanduser('/home/saliv/Devops/Python/webdriver/user_list')
 
 # Initialize counters for progress
 total_rows = 0
-completed_rows = 0
+completed_rows = 0s
 
 
 # Loop through CSV files
