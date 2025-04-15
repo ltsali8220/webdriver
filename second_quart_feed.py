@@ -38,7 +38,7 @@ service = Service(driver_path)
 
 # Initialize counters for progress
 total_rows = 0
-completed_rows = 0s
+completed_rows = 0
 
 
 # Loop through CSV files
@@ -77,9 +77,7 @@ for filename in os.listdir(directory):
                         EC.presence_of_element_located((By.XPATH, '//*[@id="question-list"]/div[1]/div[2]/div/span/input'))
                     )
                     
-                    
-
-                    
+                                        
                     # Fill in the form fields
                     driver.find_element("xpath", '//*[@id="question-list"]/div[1]/div[2]/div/span/input').send_keys(row[0])
                     driver.find_element("xpath", '//*[@id="question-list"]/div[2]/div[2]/div/span/input').send_keys(row[1])
