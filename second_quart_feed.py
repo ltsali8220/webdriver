@@ -1,4 +1,3 @@
-
 from selenium import webdriver # type: ignore
 from selenium.webdriver.chrome.service import Service# type: ignore
 from selenium.webdriver.chrome.options import Options# type: ignore
@@ -89,15 +88,13 @@ for filename in os.listdir(directory):
                     driver.find_element("xpath", '//*[@id="question-list"]/div[6]/div[2]/div/div/div[2]/div/label/span[1]/input').click()
                     driver.find_element("xpath", '//*[@id="question-list"]/div[7]/div[2]/div/div/div[1]/div/label/span[1]/input').click()
                     driver.find_element("xpath", '//*[@id="question-list"]/div[8]/div[2]/div/div/div[1]/div/label/span[1]/input').click()
-                    for feed in [random.choice(feedback)]:
-                        driver.find_element("xpath", '//*[@id="question-list"]/div[9]/div[2]/div/span/input').send_key(feedback)
-                    for ans in [random.choice(suggestions)]:
-                        driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/span/input').sent_key(suggestions)
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[9]/div[2]/div/span/input').send_keys(random.choice(feedback))
+                    driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/span/input').send_keys(random.choice(suggestions))
                     
-                    driver.find_element("xpath", '//*[@id="question-list"]/div[11]/div[2]/div/div[2]/div[5]/span/span/svg').click()
-                                       
+                   
+                    # time.sleep(60)                   
                     # Submit the form
-                    submit_button = driver.find_element(By.XPATH, '//*[@id="form-main-content1"]/div/div/div[2]/div[3]/div/button')
+                    submit_button = driver.find_element(By.XPATH, '//*[@id="form-main-content1"]/div/div/div[2]/div[2]/div/button')
                     submit_button.click()
                     
                     # Wait for a moment before closing
