@@ -94,7 +94,7 @@ for filename in os.listdir(directory):
                     for feed in [random.choice(feedback)]:
                         driver.find_element("xpath", '//*[@id="question-list"]/div[9]/div[2]/div/span/input').send_key(feedback)
                     for ans in [random.choice(suggestions)]:
-                        driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/span/input').sent_key(feedback)
+                        driver.find_element("xpath", '//*[@id="question-list"]/div[10]/div[2]/div/span/input').sent_key(suggestions)
                     
                     driver.find_element("xpath", '//*[@id="question-list"]/div[11]/div[2]/div/div[2]/div[5]/span/span/svg').click()
                                        
